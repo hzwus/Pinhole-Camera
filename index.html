@@ -1,0 +1,174 @@
+     <meta charset="utf-8" emacsmode="-*- markdown -*-"><link rel="stylesheet" href="./slate.css?">
+
+                        **Pinhole Camera Assignment**
+                           Dartmouth CS 73: Computational Photography, Fall 2020 (Professor Jarosz)
+                           Hanlin Wang
+
+**A site documenting my pinhole camera creation process**
+<figure>
+    <img src="./pinhole_final_images/pomegranates1.jpg" alt="pinhole example photo 1" width="500"/>
+    <img src="./pinhole_final_images/lines1.jpg" alt="pinhole example photo 2" width="500"/>
+</figure>
+
+  
+Constructing the Camera
+==============================================================
+
+Any pinhole camera follows the natural phenomenon of *camera obscura*---where an image in the real world is projected through a small opening onto a screen inside an otherwise dark container.
+<figure>
+    <img src="./other_images/camera_obscura_diagram.png" alt="camera obscura diagram" width="300"/>
+    <figcaption>Camera Obscura</figcaption>
+</figure>
+
+
+Box Design
+--------------------------------------------------------------
+For this assignment, rather than going through the trouble of developing photographic film, we were asked to digitally capture the pinhole image.
+Thus I used my Fuji digital camera as an additional component to the pinhole contraption, by mounting it onto another opening the size of the camera lens.
+
+<figure>
+    <img src="./other_images/digital_pinhole_camera.gif" alt="digital pinhole camera diagram" width="300"/>
+    <figcaption>Digital Camera Obscura</figcaption>
+</figure>
+
+<figure>
+    <img src="./progress_photos/shoebox.JPG" alt="shoebox" width="400"/>
+    <img src="./progress_photos/lightproofed.JPG" alt="shoebox" width="400"/>
+    <figcaption>A shoebox serves well as the box. White printer paper is affixed to the back face as the screen. Non-screen surfaces are covered with tape to minimize reflections. Any possible gaps on the outside of box are covered with tape as well, to make the entire box lightproof.</figcaption>
+</figure>
+
+
+<figure>
+    <img src="./progress_photos/cutting_hole.JPG" alt="shoebox" width="400"/>
+    <figcaption>Cutting a hole the size of my digital camera's lens for it to "peek" into the box and capture images on the screen.</figcaption>
+</figure>
+
+<figure>
+    <img src="./progress_photos/2_holes.JPG" alt="shoebox" width="300"/>
+    <img src="./progress_photos/foil.JPG" alt="shoebox" width="300"/>
+    <figcaption>Another hole cut out, this one rectangular and covered with foil. Pinhole goes here. The foil makes it easy to punch and test pinholes of various sizes.</figcaption>
+</figure>
+
+
+<figure>
+    <img src="./progress_photos/mount.JPG" alt="shoebox" width="300"/>
+    <figcaption>A mount made using my camera's lens hood for easy attachment and removal of the camera (for ease of reviewing images and adjusting camera settings).</figcaption>
+</figure>
+
+
+Pinhole Calculation
+--------------------------------------------------------------
+
+The idea pinhole is given by $1.9\sqrt{f \lambda}$, where $f$ is the distance from pinhole to screen (19cm for my box), and $\lambda$ is the wavelength of light (about 550nm). This gives an ideal pinhole diameter of roughly 0.6mm.
+I decided to test 3 pinhole diameters---0.6mm (which I anticipated to form the clearest image) and also 1.5mm and 5mm, to see the effects of a larger pinhole.
+
+<figure>
+    <img src="./progress_photos/setup.JPG" alt="shoebox" width="300"/>
+    <figcaption>3 holes of varying diameters punched into the foil. Two of them are covered at a time. The uncovered one is the active pinhole.</figcaption>
+</figure>
+
+Testing and Debugging the Camera
+==============================================================
+<figure>
+    <img src="./progress_photos/park_shoot.JPG" alt="shoebox" width="300"/>
+    <img src="./progress_photos/backyard_shoot.JPG" alt="shoebox" width="300"/>
+    <img src="./progress_photos/music_stand.JPG" alt="shoebox" width="300"/>
+    <figcaption>Various setups.</figcaption>
+</figure>
+
+<figure>
+    <img src="./debug_images/debug_lightleak1.jpg" alt="shoebox" width="300"/>
+    <img src="./debug_images/debug_lightleak2.jpg" alt="shoebox" width="300"/>
+    <figcaption>Light leaks. I realized they were from slight gaps in the camera mount, so I carefully reinforced with duct tape.</figcaption>
+</figure>
+
+<figure>
+    <img src="./debug_images/debug_shake.jpg" alt="shoebox" width="300"/>
+    <figcaption>Shake was pretty apparent in this handheld 25 second exposure. I decided to stick with a tripod from then on.</figcaption>
+</figure>
+
+<figure>
+    <img src="./debug_images/half_selfie.jpg" alt="shoebox" width="300"/>
+    <figcaption>Framing was tricky. I realized I needed to point the box to the left of the scene I wanted to capture for it to be centered in frame.</figcaption>
+</figure>
+
+<figure>
+    <img src="./debug_images/debug_decent1.jpg" alt="decent1" width="300"/>
+    <img src="./debug_images/debug_decent2.jpg" alt="decent1" width="300"/>
+    <figcaption>Getting my camera to always focus on the screen in the box was difficult. Autofocus lock would reset after taking an image, so I ended up manually focusing on the distance from the opening to the screen, being careful not to touch the focus ring. I managed to get these two decent photos.</figcaption>
+</figure>
+
+
+Final Images
+==============================================================
+
+Scene 1: Pomegranate Tree and Watering Can
+
+(Aperture was f/2.8, shutter speed and ISO were calibrated to normalize the exposure of each image)
+
+<figure>
+    <img src="./pinhole_final_images/pomegranates1.jpg" alt=pomegranate .6mm" width="700"/>
+    <figcaption>0.6mm pinhole</figcaption>
+</figure>
+
+<figure>
+    <img src="./pinhole_final_images/pomegranates2.jpg" alt=pomegranate 1.5mm" width="700"/>
+    <figcaption>1.5mm pinhole</figcaption>
+</figure>
+
+<figure>
+    <img src="./pinhole_final_images/pomegranates3.jpg" alt=pomegranate 5mm" width="700"/>
+    <figcaption>5mm pinhole</figcaption>
+</figure>
+
+
+Scene 2: Telephone Pole Wires
+
+(Aperture was f/2.8, shutter speed and ISO were calibrated to normalize the exposure of each image)
+
+<figure>
+    <img src="./pinhole_final_images/lines1.jpg" alt=telephone pole .6mm" width="700"/>
+    <figcaption>0.6mm pinhole</figcaption>
+</figure>
+
+</figure>
+    <img src="./pinhole_final_images/lines2.jpg" alt=telephone pole 1.5mm" width="700"/>
+    <figcaption>1.5mm pinhole</figcaption>
+</figure>
+
+</figure>
+    <img src="./pinhole_final_images/lines3.jpg" alt=telephone pole 5mm" width="700"/>
+    <figcaption>5mm pinhole</figcaption>
+</figure>
+
+As expected from the calculation, the 0.6mm pinhole gave the sharpest image. The 1.5mm pinhole gave a brighter (so I used a smaller exposure time and lower ISO) and slightly blurrier image. The 5mm pinhole produced an even brighter and blurrier image.
+Thought I didn't test a pinhole smaller than 0.6mm, I would expect it to get blurrier due to the diffraction limit. $1.9\sqrt{f \lambda}$ gives the "sweet spot" between blurriness and diffraction.
+
+Gallery (More Images)
+--------------------------------------------------------------
+(All taken with the 0.6mm pinhole)
+
+<figure>
+    <img src="./pinhole_final_images/window.jpg" alt=window" width="500"/>
+</figure>
+
+<figure>
+    <img src="./pinhole_final_images/window_sideprofile.jpg" alt=telephone pole .6mm" width="500"/>
+    <img src="./pinhole_final_images/window_lookingout.jpg" alt=telephone pole .6mm" width="500"/>
+    <figcaption>Taking advantage of long exposure time to create a "ghost" effect, by posing in frame for a portion of the exposure</figcaption>
+</figure>
+
+<figure>
+    <img src="./pinhole_final_images/lines_color.jpg" alt=telephone pole .6mm" width="350"/>
+<figure>
+
+<figure>
+    <img src="./pinhole_final_images/lines_multi.jpg" alt=telephone pole .6mm" width="700"/>
+    <figcaption>Multiple pinholes of various sizes exposed at once</figcaption>
+</figure>
+
+
+
+
+<style class="fallback">body{visibility:hidden}</style><script>markdeepOptions={tocStyle:'long'};</script>
+<!-- Markdeep: --><script src="./markdeep.min.js?" charset="utf-8"></script>
